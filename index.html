@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hamish Ross</title>
+<meta name="description" content="Hamish Ross, Computer Science student at Heriot-Watt University. FPGAs, embedded systems and home lab projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app" id="app">
+  <header class="top">
+    <div class="id">
+      <a class="name" href="#" id="home">Hamish Ross</a>
+      <p class="intro">Computer Science student at Heriot-Watt University in Edinburgh. I work close to the hardware: FPGAs, embedded displays and a home-built NAS.</p>
+    </div>
+    <nav class="nav" aria-label="Pages">
+      <a href="#projects" data-go="projects">Projects</a>
+      <a href="#blog" data-go="blog">Blog</a>
+      <a href="#cv" data-go="cv">CV</a>
+      <a href="#about" data-go="about">About</a>
+      <a href="#contact" data-go="contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="stage">
+    <svg id="board" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="group" aria-label="Circuit board. Each labelled component opens a page."></svg>
+  </main>
+
+  <footer class="strip">
+    <div class="inspect" aria-live="polite">
+      <span class="ref" id="insRef"></span>
+      <span class="ins-title" id="insTitle">Select a component</span>
+      <span id="insText">Each labelled part of the board opens a page</span>
+    </div>
+    <div class="sys">
+      <span class="dot" id="sysDot"></span><span id="sysText">Powering up</span>
+      <span class="sep"></span><span>Edinburgh <time data-clock></time></span>
+    </div>
+  </footer>
+
+  <section class="index" aria-label="Pages">
+    <h2 class="index-h">Pages</h2>
+    <a class="idx" href="#projects" data-go="projects"><span class="ref">U1</span><span class="t">Projects</span><span class="b">Things I've built and am building</span><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a class="idx" href="#blog" data-go="blog"><span class="ref">Y1</span><span class="t">Blog</span><span class="b">Build logs and notes</span><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a class="idx" href="#cv" data-go="cv"><span class="ref">U2 U3</span><span class="t">CV</span><span class="b">Education, experience and skills</span><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a class="idx" href="#about" data-go="about"><span class="ref">U5</span><span class="t">About</span><span class="b">Who I am and what I'm working towards</span><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a class="idx" href="#contact" data-go="contact"><span class="ref">J1 J2</span><span class="t">Contact</span><span class="b">Email, GitHub and LinkedIn</span><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </section>
+</div>
+
+<div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="ph">
+  <div class="sheet-bar">
+    <button class="back" id="back" type="button"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Board</button>
+    <span class="crumb"><span class="dom">hamishross.dev / </span><b id="crumb">cv</b></span>
+    <span class="partref"><span class="ref" id="pref">U2 U3</span><span class="pname" id="pname">DDR4 memory</span></span>
+  </div>
+  <div class="sheet-scroll" id="scroll"><article class="page" id="page"></article></div>
+</div>
+<div class="toast" id="toast" hidden role="status"></div>
+
+<!-- ================= Page content ================= -->
+<template id="t-projects">
+  <h1 id="ph">Projects</h1>
+  <p class="lede">Things I've built or am in the middle of building. Each one gets a write-up covering what it does, how it works and what went wrong along the way.</p>
+  <ul class="proj-list">
+    <li class="proj">
+      <span class="yr">2026–27</span>
+      <div>
+        <h2>Compressed neural networks on FPGAs</h2>
+        <p>My honours dissertation. I'm measuring what compression techniques such as quantisation actually save when a neural network runs on an FPGA accelerator: how much power, how much speed, and how much accuracy it costs.</p>
+        <div class="meta"><span class="st prog">In progress</span><span class="tag">FPGA</span><span class="tag">Quantisation</span><span class="tag">Power measurement</span></div>
+      </div>
+      <div class="links"><a href="#" data-soon="The dissertation write-up goes here once it's ready">Write-up</a></div>
+    </li>
+    <li class="proj">
+      <span class="yr">2026</span>
+      <div>
+        <h2>Home NAS</h2>
+        <p>A small home server for storage and backups, built in a Jonsbo N4 case around a Ryzen 5 5600GT with two 4&nbsp;TB IronWolf drives. Backup scripts and a health-check dashboard come next.</p>
+        <div class="meta"><span class="st prog">Building</span><span class="tag">Linux</span><span class="tag">Storage</span><span class="tag">Scripting</span></div>
+      </div>
+      <div class="links"><a href="#" data-soon="Build log coming soon">Build log</a><a href="#" data-soon="Links to the GitHub repo on the live site">Source</a></div>
+    </li>
+    <li class="proj">
+      <span class="yr">2026</span>
+      <div>
+        <h2>NAS health desk display</h2>
+        <p>A 2-inch screen and status LEDs on an Arduino Nano ESP32 that show how the NAS is doing at a glance. An analogue needle gauge for power draw comes in version two.</p>
+        <div class="meta"><span class="st plan">Planned</span><span class="tag">ESP32</span><span class="tag">Embedded C++</span></div>
+      </div>
+      <div class="links"><a href="#" data-soon="Links to the GitHub repo on the live site">Source</a></div>
+    </li>
+    <li class="proj">
+      <span class="yr">2026</span>
+      <div>
+        <h2>Pi-hole on a Raspberry Pi 3</h2>
+        <p>Network-wide ad and tracker blocking for my home network, running on a spare Raspberry Pi 3.</p>
+        <div class="meta"><span class="st plan">Planned</span><span class="tag">Networking</span><span class="tag">DNS</span></div>
+      </div>
+      <div class="links"><a href="#" data-soon="Write-up coming soon">Write-up</a></div>
+    </li>
+    <li class="proj">
+      <span class="yr">2026</span>
+      <div>
+        <h2>hamishross.dev</h2>
+        <p>This site. A circuit board you click through, served from a Raspberry Pi 5 on my desk, with the source public on GitHub.</p>
+        <div class="meta"><span class="st prog">In progress</span><span class="tag">SVG</span><span class="tag">Self-hosting</span></div>
+      </div>
+      <div class="links"><a href="#blog" data-go="blog" data-post="board">Write-up</a><a href="#" data-soon="Links to the GitHub repo on the live site">Source</a></div>
+    </li>
+  </ul>
+</template>
+
+<template id="t-cv">
+  <div class="head-row">
+    <h1 id="ph">CV</h1>
+    <button class="btn" type="button" data-soon="On the live site this downloads cv.pdf">Download PDF</button>
+  </div>
+  <p class="lede">Computer Science student at Heriot-Watt University, working towards hardware, embedded systems and energy-efficient machine learning.</p>
+
+  <section class="sec">
+    <h2 class="sec-h">Education</h2>
+    <div class="cv-row">
+      <div class="when">Graduating 2027</div>
+      <div>
+        <h3>BSc (Hons) Computer Science</h3>
+        <div class="org">Heriot-Watt University, Edinburgh</div>
+        <p>Dissertation on evaluating compressed neural networks on FPGAs, with a focus on power draw. Modules include Language Processors, Data Structures and Algorithms, and Foundations of Computer Science.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec-h">Experience</h2>
+    <div class="cv-row">
+      <div class="when">Current</div>
+      <div>
+        <h3>Bartender</h3>
+        <div class="org">Somewhere by Nico, Edinburgh</div>
+        <p>Fast, accurate service in a busy themed cocktail bar, alongside full-time study.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec-h">Volunteering</h2>
+    <div class="cv-row">
+      <div class="when">Volunteer</div>
+      <div>
+        <h3>Hardware refurbishment</h3>
+        <div class="org">The Turing Trust</div>
+        <p>Testing, repairing and preparing donated computers for reuse in schools in sub-Saharan Africa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec-h">Selected projects <span><a href="#projects" data-go="projects">All projects</a></span></h2>
+    <ul class="mini">
+      <li><span class="when">2026–27</span><span>Compressed neural networks on FPGAs, dissertation</span></li>
+      <li><span class="when">2026</span><span>Home NAS with backup scripts and a health dashboard</span></li>
+      <li><span class="when">2026</span><span>NAS health desk display on an Arduino Nano ESP32</span></li>
+    </ul>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec-h">Skills</h2>
+    <dl class="kv">
+      <dt>Hardware</dt><dd>FPGA development, Arduino and ESP32, PC and server builds, hardware repair</dd>
+      <dt>Systems</dt><dd>Linux, home networking, Raspberry Pi, self-hosting</dd>
+      <dt>Programming</dt><dd>Python, C and C++</dd>
+    </dl>
+  </section>
+</template>
+
+<template id="t-blog">
+  <h1 id="ph">Blog</h1>
+  <p class="lede">Build logs and notes on whatever I'm working on. A new post goes up when a project reaches a milestone.</p>
+  <ul class="posts">
+    <li class="post">
+      <div class="when">Oct 2026</div>
+      <div>
+        <h2><a href="#" data-post="board">Turning an FPGA board into a homepage</a></h2>
+        <p>Why the homepage is a circuit board, how it's drawn and how the zoom works.</p>
+        <div class="meta"><span class="st prog">Draft</span><span class="tag">4 min read</span></div>
+      </div>
+    </li>
+    <li class="post planned">
+      <div class="when">Coming up</div>
+      <div>
+        <h2>Choosing parts for a quiet home NAS</h2>
+        <p>The case, CPU and drives I picked, and why a Ryzen APU suits a storage box.</p>
+        <div class="meta"><span class="st plan">Planned</span></div>
+      </div>
+    </li>
+    <li class="post planned">
+      <div class="when">Coming up</div>
+      <div>
+        <h2>What 50 papers taught me about FPGA neural networks</h2>
+        <p>Notes from my dissertation literature review on compressing networks for FPGA accelerators.</p>
+        <div class="meta"><span class="st plan">Planned</span></div>
+      </div>
+    </li>
+  </ul>
+</template>
+
+<template id="t-post-board">
+  <a href="#" class="crumbs-back" data-allposts><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>All posts</a>
+  <h1 id="ph">Turning an FPGA board into a homepage</h1>
+  <div class="byline"><span>October 2026</span><span>4 min read</span><span class="st prog">Draft</span></div>
+  <div class="body">
+    <p>Most portfolio sites are a list of links. I wanted mine to look like the work I want to do, so the homepage is a development board. The FPGA in the middle holds my projects, the memory holds my CV, the crystal keeps time for the blog, and the network ports are how you get in touch.</p>
+
+    <h2>Drawn, not photographed</h2>
+    <p>A photo of a real board would have been quicker, but it would belong to someone else, carry their branding and look soft on a high-resolution screen. This board is SVG, built from a short list of components and where each one sits. Every chip is its own element, so it can react when you point at it, and it stays sharp at any zoom.</p>
+    <p>The details are deliberate. The traces between the FPGA and the memory wiggle because real DDR traces are length-matched so signals arrive together. The FPGA boots from the small flash chip below it, which is why the status LEDs flicker when the page loads.</p>
+
+    <h2>How the zoom works</h2>
+    <p>Clicking a component doesn't scale an image. The SVG's viewBox, the window onto the drawing, animates from the whole board down to the part you picked. Because the drawing is vector, it's redrawn at full resolution on every frame.</p>
+<pre><code><span class="c">// Move the camera between two boxes</span>
+const w  = w0 * Math.pow(w1 / w0, t);  <span class="c">// zoom changes at an even rate</span>
+const cx = focus.x - offset * (1 - t) * w;
+svg.setAttribute('viewBox', `${cx - w/2} ${cy - h/2} ${w} ${h}`);</code></pre>
+    <p>Once the part fills the screen, the page grows out of it. Going back runs the same animation in reverse.</p>
+
+    <div class="tbl"><table>
+      <thead><tr><th>Component</th><th>Page</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>FPGA (U1)</td><td>Projects</td><td>It's the part that does the work</td></tr>
+        <tr><td>DDR4 memory (U2, U3)</td><td>CV</td><td>It stores history</td></tr>
+        <tr><td>Crystal (Y1)</td><td>Blog</td><td>It keeps time</td></tr>
+        <tr><td>USB-C and Ethernet (J1, J2)</td><td>Contact</td><td>They connect the board to the outside world</td></tr>
+        <tr><td>Power regulator (U5)</td><td>About</td><td>It powers everything else</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>Where it runs</h2>
+    <p>The site is a set of static files served from a Raspberry Pi 5 on my desk in Edinburgh, and the source is public on GitHub. The status LEDs on the board will eventually show that Pi's own health.</p>
+  </div>
+</template>
+
+<template id="t-about">
+  <h1 id="ph">About</h1>
+  <div class="prose">
+    <p>I'm Hamish, a Computer Science student at Heriot-Watt University in Edinburgh. I'm most interested in the point where software meets hardware: how code becomes circuits, and how to make it run faster on less power.</p>
+    <p>My dissertation looks at compressed neural networks on FPGAs, measuring what techniques like quantisation actually save in watts and what they cost in accuracy. Outside of uni I'm building a home NAS, a small desk display that reports its health, and this site, which runs on a Raspberry Pi 5.</p>
+    <p>I also work behind the bar at a cocktail bar in Edinburgh, which is good training for staying calm when everything happens at once.</p>
+  </div>
+  <section class="sec">
+    <h2 class="sec-h">Specifications <span>HR-01 datasheet, page 1</span></h2>
+    <dl class="kv spec">
+      <dt>Location</dt><dd>Edinburgh, UK</dd>
+      <dt>Study</dt><dd>BSc (Hons) Computer Science, Heriot-Watt University</dd>
+      <dt>Dissertation</dt><dd>Compressed neural networks on FPGAs</dd>
+      <dt>Interests</dt><dd>Embedded systems, FPGAs, energy-efficient ML hardware</dd>
+      <dt>Looking for</dt><dd>Graduate engineering roles</dd>
+      <dt>Hosted on</dt><dd>Raspberry Pi 5</dd>
+    </dl>
+  </section>
+  <p style="margin-top:36px"><a href="#contact" data-go="contact">Get in touch</a></p>
+</template>
+
+<template id="t-contact">
+  <h1 id="ph">Contact</h1>
+  <p class="lede">Email is the quickest way to reach me. I'm happy to talk about graduate roles, FPGAs or home lab builds.</p>
+  <div class="contact-list">
+    <div class="c-row">
+      <span class="c-label">Email</span>
+      <span class="c-val big" id="emailVal">hello@hamishross.dev</span>
+      <button class="btn ghost" type="button" data-copy="hello@hamishross.dev">Copy</button>
+    </div>
+    <div class="c-row">
+      <span class="c-label">GitHub</span>
+      <span class="c-val todo">Profile link goes here</span>
+      <span></span>
+    </div>
+    <div class="c-row">
+      <span class="c-label">LinkedIn</span>
+      <span class="c-val todo">Profile link goes here</span>
+      <span></span>
+    </div>
+    <div class="c-row">
+      <span class="c-label">Location</span>
+      <span class="c-val">Edinburgh, UK. It's <time data-clock></time> here.</span>
+      <span></span>
+    </div>
+  </div>
+</template>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
